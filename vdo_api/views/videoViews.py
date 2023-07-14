@@ -7,4 +7,4 @@ class VideoViewSet(viewsets.ModelViewSet):
     model = getModel("vdo_api.Video")
     queryset = model.objects.all().order_by('-created_at')
     serializer_class = VideoReadOnlyHyperlinkedSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    # permission_classes = [permissions.IsAuthenticatedOrReadOnly]
