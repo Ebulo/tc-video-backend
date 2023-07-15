@@ -13,6 +13,7 @@ class Video(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=500)
     description = models.TextField(null=True, blank=True)
+    thumbnail = models.ImageField(upload_to="thumbnails/upload/", null=True, blank=True)
     video = models.FileField(upload_to="videos/upload/")
     subtitle = models.TextField(null=True, blank=True)
     subtitle_file = models.FileField(upload_to="subtitles/upload/", null=True, blank=True)
