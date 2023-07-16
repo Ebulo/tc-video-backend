@@ -1,3 +1,10 @@
 core
 static
 media
+env
+
+db.sqlite3
+
+__pycache__
+vdo_api/__pycache__
+ 
