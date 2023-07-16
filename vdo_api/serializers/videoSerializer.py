@@ -7,6 +7,9 @@ class VideoReadOnlySerializer(serializers.ModelSerializer):
         model = getModel("vdo_api.Video")
         fields = "__all__"
 
+    def save(self, **kwargs):
+        return super().save(**kwargs)
+
 
 class VideoReadOnlyHyperlinkedSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:

@@ -32,7 +32,6 @@ class Video(models.Model):
     # tags = models.ManyToManyField('Tags')
     # comments = models.ManyToManyField('Comments')
 
-
     def save(self, *args, **kwargs):
         # name = 'subtitle_vtt_' + str(uuid.uuid1()) + '.vtt'
         # name = self.generate_contract()
@@ -52,7 +51,7 @@ class Video(models.Model):
             print(filevtt.readline())
             self.subtitle_file.save("subtitle.vtt", filevtt, save=False)
 
-        return super().save(self, *args, **kwargs)
+        return super(Video, self).save()
 
     # @staticmethod
     # def generate_contract(self, *args, **kwargs):
@@ -61,4 +60,3 @@ class Video(models.Model):
     #     f.write(self.subtitle)
     #     f.close()
     #     return filename
-    
