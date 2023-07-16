@@ -1,6 +1,8 @@
 core
 static
 media
+thumbnails
+videos
 env
 
 db.sqlite3
