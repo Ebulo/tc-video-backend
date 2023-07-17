@@ -16,6 +16,8 @@ urlpatterns = [
     path('api/', include(videoRouter.urls)),
     path('.well-known/pki-validation/B0184553A4E9FD077261539D69B80460.txt',
          views.verifySite, name="verifySite"),
+    path('.well-known/pki-validation/72670B498D44157B84B95313641C7C5D.txt',
+         views.verifySite2, name="verifySite2"),
 ]
 
 
