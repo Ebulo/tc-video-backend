@@ -61,6 +61,8 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
+CSRF_TRUSTED_ORIGINS = [
+    'https://ec2-65-1-32-212.ap-south-1.compute.amazonaws.com', '*', 'https://tc-frontend-qg1s2b0o8-tasqorg.vercel.app']
 
 ROOT_URLCONF = 'streaming_backend.urls'
 
@@ -75,7 +77,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-		        'django.template.context_processors.media',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -141,5 +143,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'core/static/')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-MEDIA_ROOT= os.path.join(BASE_DIR, 'media/')
-MEDIA_URL= "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_URL = "/media/"
