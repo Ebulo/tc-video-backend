@@ -62,7 +62,7 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_ALLOW_ALL = True
 CSRF_TRUSTED_ORIGINS = [
-    'https://ec2-65-1-32-212.ap-south-1.compute.amazonaws.com', '*', 'https://tc-frontend-qg1s2b0o8-tasqorg.vercel.app']
+    'https://ec2-65-1-32-212.ap-south-1.compute.amazonaws.com', 'https://tc-frontend-qg1s2b0o8-tasqorg.vercel.app']
 USE_X_FORWARDED_HOST = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
@@ -146,4 +146,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-MEDIA_URL = "/media/"
+MEDIA_URL = "https://ec2-65-1-32-212.ap-south-1.compute.amazonaws.com/media/"
