@@ -14,4 +14,18 @@ class VideoReadOnlySerializer(serializers.ModelSerializer):
 class VideoReadOnlyHyperlinkedSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = getModel("vdo_api.Video")
-        fields = "__all__"
+        fields = [
+            "id",
+            "url",
+            "user",
+            "title",
+            "description",
+            "thumbnail",
+            "video",
+            "subtitle",
+            "subtitle_file",
+            "created_at",
+            "updated_at",
+            "likes",
+            "views",
+        ]
