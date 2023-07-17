@@ -146,4 +146,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-MEDIA_URL = "//ec2-65-1-32-212.ap-south-1.compute.amazonaws.com/media/"
+MEDIA_URL = "https://ec2-65-1-32-212.ap-south-1.compute.amazonaws.com/media/"
+# MEDIA_URL = "http://127.0.0.1:8000/media/"
