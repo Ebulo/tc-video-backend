@@ -63,6 +63,8 @@ MIDDLEWARE = [
 CORS_ORIGIN_ALLOW_ALL = True
 CSRF_TRUSTED_ORIGINS = [
     'https://ec2-65-1-32-212.ap-south-1.compute.amazonaws.com', '*', 'https://tc-frontend-qg1s2b0o8-tasqorg.vercel.app']
+USE_X_FORWARDED_HOST = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 ROOT_URLCONF = 'streaming_backend.urls'
 
